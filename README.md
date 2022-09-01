@@ -1,2 +1,2 @@
 # motus
-Aut Visum Aut Non!
+Aut Visum Aut Non
