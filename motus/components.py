@@ -51,7 +51,6 @@ def yearly_county_population_historic(county_population_by_year_file: str,
     return df[population_field_name]
 
 
-
 def wrf_to_mean_balancing_authority_historical(max_year: int,
                                                yearly_county_population: pd.Series,
                                                ) -> pd.Series:
@@ -75,8 +74,8 @@ def my_data() -> Dict[str, np.ndarray]:
 
 @tag(experiment="b", subexperiment="n1")
 # @model(Tell, "balancing_authority_population_yearly")
-def electricity_demand_by_year(balancing_authority_population_yearly: pd.Series) -> pd.Series:
+def electricity_demand_by_year(yearly_county_population_historic: pd.Series) -> pd.Series:
 
-    return balancing_authority_population_yearly * 2
+    return yearly_county_population_historic * 2
 
 
